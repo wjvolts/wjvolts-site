@@ -16,12 +16,12 @@ A **WJVolts - LTDA** atua em:
 ---
 
 ## 🌐 Acesse o site
-👉 [WJVolts no GitHub Pages](https://seuusuario.github.io/wjvolts-site/)
+👉 [WJVolts no GitHub Pages](https://wjvolts.github.io/wjvolts-site/)
 
 ---
 
 ## 📞 Contatos
-- ✉️ E-mail: [contato@wjvolts.com](mailto:contato@wjvolts.com)
+- ✉️ E-mail: [contato@wjvolts.com](mailto:almoxarife@wjvolts.com)
 - 📱 WhatsApp: [Enviar mensagem](https://wa.me/5527997723637)
 
 ---
