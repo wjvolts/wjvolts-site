@@ -1,5 +1,3 @@
-# wjvolts-site
-Uma visão em busca do desenvolvimento profissional, sobre a elétrico industrial. Percorrendo uma rota fundamental da elétrica e sua evolução.
 # WJVolts - LTDA
 
 Site institucional simples da **WJVolts - LTDA** publicado no GitHub Pages.
