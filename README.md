@@ -1,136 +1,40 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WJVolts - LTDA</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #FFA500;
-    }
-    header {
-      background: #1e3a8a;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    header p {
-      margin: 5px 0 0;
-      font-size: 1rem;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #1e3a8a;
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li::before {
-      content: "✔ ";
-      color: #1e3a8a;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      background: #1e3a8a;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    .contact a:hover {
-      background: #0f1f4d;
-    }
-    footer {
-      background: #f4f4f4;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    /* Botão flutuante WhatsApp */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-    }
-    .whatsapp-float i {
-      margin-top: 15px;
-    }
-    .whatsapp-float:hover {
-      background-color: #1da851;
-    }
-  </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <h1>WJVolts - LTDA</h1>
-    <p>Consultorias • Serviços Diversos • Segurança • Manutenção Elétrica</p>
-  </header>
+# WJVolts - LTDA
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>A <strong>WJVolts-Ltda</strong> atua com excelência em consultorias, sistemas de segurança, bloqueio de partida, vistorias e manutenção elétrica de máquinas e tratores. Nosso compromisso é oferecer soluções eficientes, seguras e inovadoras para o setor industrial.</p>
-  </section>
+Site institucional simples da **WJVolts - LTDA** publicado no GitHub Pages.
 
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <ul>
-      <li>Consultorias técnicas</li>
-      <li>Sistemas de segurança e bloqueio de partida</li>
-      <li>Vistorias e diagnósticos</li>
-      <li>Manutenção elétrica de máquinas e tratores</li>
-      <li>Atendimento especializado para setor industrial</li>
-    </ul>
-  </section>
+## 📌 Sobre a empresa
+A **WJVolts - LTDA** atua em:
+- Consultorias técnicas
+- Sistemas de segurança e bloqueio de partida
+- Vistorias e diagnósticos
+- Manutenção elétrica de máquinas e tratores
+- Atendimento especializado para setor industrial
 
-  <section id="diferenciais">
-    <h2>Diferenciais</h2>
-    <p>✔ Equipe qualificada e especializada<br>
-       ✔ Atendimento personalizado<br>
-       ✔ Experiência em áreas industriais de grande porte<br>
-       ✔ Soluções rápidas e eficientes com foco na segurança</p>
-  </section>
+📍 Localização: Campo Grande, Cariacica – ES  
+🆔 CNPJ: 52.216.384/0001-88
 
-  <section class="contact" id="contato">
-    <h2>Contato</h2>
-    <p>Fale com a nossa equipe:</p>
-    <a href="mailto:contato@wjvolts.com">✉️ E-mail</a>
-    <a href="https://wa.me/5527997723637" target="_blank">📱 WhatsApp</a>
-  </section>
+---
 
-  <footer>
-    <p>WJVolts - LTDA • CNPJ: 52.216.384/0001-88</p>
-    <p>Campo Grande, Cariacica – ES</p>
-  </footer>
+## 🌐 Acesse o site
+👉 [WJVolts no GitHub Pages](https://seuusuario.github.io/wjvolts-site/)
 
-  <!-- Botão Flutuante WhatsApp -->
-  <a href="https://wa.me/5527997723637" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-</body>
-</html>
+---
+
+## 📞 Contatos
+- ✉️ E-mail: [contato@wjvolts.com](mailto:contato@wjvolts.com)
+- 📱 WhatsApp: [Enviar mensagem](https://wa.me/5527997723637)
+
+---
+
+## ⚡ Diferenciais
+- Equipe qualificada e especializada
+- Atendimento personalizado
+- Experiência em áreas industriais de grande porte
+- Soluções rápidas e eficientes com foco na segurança
+
+---
+
+
+
+Depois, basta abrir o arquivo `index.html` no navegador.
+
