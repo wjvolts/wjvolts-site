@@ -36,15 +36,3 @@ A **WJVolts - LTDA** atua em:
 
 ---
 
-## 🚀 Como visualizar localmente
-Se quiser abrir o site direto no seu computador:
-1. Baixe ou clone este repositório.
-2. Abra o arquivo `index.html` em qualquer navegador.
-
-```bash
-# Clonar repositório
-git clone https://github.com/wjvolts/wjvolts-site.git
-cd wjvolts-site
-```
-
-Depois, basta abrir o arquivo `index.html` no navegador.
