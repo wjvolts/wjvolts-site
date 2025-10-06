@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff8f0;
+      border-bottom: 4px solid #f7a30a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-height: 80px;
+    }
+
+    header h1 {
+      color: #d87f00;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      color: #444;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d87f00;
+      border-left: 6px solid #f7a30a;
+      padding-left: 10px;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table th {
+      background-color: #f7a30a;
+      color: white;
+    }
+
+    .machine-card {
+      border: 2px solid #f7a30a;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px 0;
+      background: #fffdf8;
+    }
+
+    .machine-card h3 {
+      color: #d87f00;
+      margin-top: 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .gallery img {
+      width: 32%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #f7a30a;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #d87f00;
+    }
+
+    footer {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 20px;
+      border-top: 4px solid #f7a30a;
+      color: #555;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo wjvolts - Copia.jpeg" alt="Logo WJVolts" />
+    <h1>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</h1>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+  </header>
+
+  <section>
+    <h2>1. Objetivo do Serviço</h2>
+    <p>
+      Atender à solicitação do cliente para desinstalação de 5 (cinco) aparelhos de ar-condicionado tipo Split,
+      devido à reforma das salas onde os equipamentos estão instalados. Após a conclusão da reforma,
+      os equipamentos serão reinstalados no mesmo local, conforme planejamento.
+    </p>
+
+    <h2>2. Resumo das Atividades Executadas – Dia 04/10/2025</h2>
+    <table class="table">
+      <tr>
+        <th>Nº da Máquina</th>
+        <th>Marca/Modelo</th>
+        <th>Situação do Gás</th>
+        <th>Status</th>
+      </tr>
+      <tr><td>1</td><td>Consul</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
+      <tr><td>2</td><td>Midea (R32)</td><td>Gás perdido (R32 é inflamável)</td><td>Desinstalada</td></tr>
+      <tr><td>3</td><td>Agratto</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
+      <tr><td>4</td><td>Midea</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
+      <tr><td>5</td><td>Gree</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
+    </table>
+
+    <h2>3. Relatório de Atividades – Dia 06/10/2025</h2>
+    <ol>
+      <li>Formalizada com o responsável técnico a confecção dos novos suportes metálicos (50x50 cm, cantoneira de 3”).</li>
+      <li>Salas trancadas foram abertas, permitindo acesso às máquinas 4 e 5.</li>
+      <li>A máquina 5 (Gree), instalada no chão, foi desinstalada e teve o gás recolhido com sucesso.</li>
+      <li>A máquina 4 (Midea) aguarda o novo suporte; não houve intervenção, pois depende da fabricação solicitada pelo cliente.</li>
+    </ol>
+
+    <h2>4. Galeria de Fotos</h2>
+
+    <div class="machine-card">
+      <h3>Máquina 1 – Consul</h3>
+      <div class="gallery">
+        <img src="img/maquina1_1.jpg" alt="Esquema elétrico - Máquina 1">
+        <img src="img/maquina1_2.jpg" alt="Etiqueta técnica - Máquina 1">
+        <img src="img/maquina1_3.jpg" alt="Finalização - Máquina 1">
+      </div>
+    </div>
+
+    <div class="machine-card">
+      <h3>Máquina 2 – Midea (R32)</h3>
+      <div class="gallery">
+        <img src="img/maquina2_1.jpg" alt="Esquema elétrico - Máquina 2">
+        <img src="img/maquina2_2.jpg" alt="Etiqueta técnica - Máquina 2">
+        <img src="img/maquina2_3.jpg" alt="Finalização - Máquina 2">
+      </div>
+    </div>
+
+    <div class="machine-card">
+      <h3>Máquina 3 – Agratto</h3>
+      <div class="gallery">
+        <img src="img/maquina3_1.jpg" alt="Esquema elétrico - Máquina 3">
+        <img src="img/maquina3_2.jpg" alt="Etiqueta técnica - Máquina 3">
+        <img src="img/maquina3_3.jpg" alt="Finalização - Máquina 3">
+      </div>
+    </div>
+
+    <div class="machine-card">
+      <h3>Máquina 4 – Midea</h3>
+      <div class="gallery">
+        <img src="img/maquina4_1.jpg" alt="Esquema elétrico - Máquina 4">
+        <img src="img/maquina4_2.jpg" alt="Etiqueta técnica - Máquina 4">
+        <img src="img/maquina4_3.jpg" alt="Finalização - Máquina 4">
+      </div>
+    </div>
+
+    <div class="machine-card">
+      <h3>Máquina 5 – Gree</h3>
+      <div class="gallery">
+        <img src="img/maquina5_1.jpg" alt="Esquema elétrico - Máquina 5">
+        <img src="img/maquina5_2.jpg" alt="Etiqueta técnica - Máquina 5">
+        <img src="img/maquina5_3.jpg" alt="Finalização - Máquina 5">
+      </div>
+    </div>
+
+    <a href="Laudo_Tecnico_Desinstalacao_Ar_Condicionado.docx" class="download-btn" download>
+      📄 Baixar Laudo Completo
+    </a>
+  </section>
+
+  <footer>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+    <p>Campo Grande, Cariacica – ES</p>
+    <p>© 2025 WJVolts. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
