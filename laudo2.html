@@ -46,6 +46,7 @@
       color: #d87f00;
       border-left: 6px solid #f7a30a;
       padding-left: 10px;
+      text-align: left;
     }
 
     .table {
@@ -62,32 +63,6 @@
     .table th {
       background-color: #f7a30a;
       color: white;
-    }
-
-    .machine-card {
-      border: 2px solid #f7a30a;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 20px 0;
-      background: #fffdf8;
-    }
-
-    .machine-card h3 {
-      color: #d87f00;
-      margin-top: 0;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .gallery img {
-      width: 32%;
-      border-radius: 8px;
-      border: 1px solid #ccc;
     }
 
     .download-btn {
@@ -115,40 +90,83 @@
       font-size: 14px;
     }
 
+    .img-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .img-container img {
+      width: 75%;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.02);
+    }
+
     @media (max-width: 768px) {
-      .gallery img {
-        width: 100%;
+      .img-container img {
+        width: 95%;
+        max-width: none;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
-    <div style="text-align: center;">
-  <img src="img/logo-wjvolts...png" alt="Logo WJVolts" style="height:100px;">
-  <h1>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</h1>
-  <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+    <img src="img/logo-wjvolts...png" alt="Logo WJVolts" style="height:100px;">
+    <h1>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</h1>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
 
-  <button onclick="window.print()" 
-          style="background-color:#f59e0b; color:white; border:none; 
-                 padding:10px 20px; border-radius:8px; cursor:pointer; 
-                 font-size:16px; margin-top:10px;">
-    🖨️ Imprimir / Baixar PDF
-  </button>
+    <button onclick="window.print()" 
+            style="background-color:#f59e0b; color:white; border:none; 
+                   padding:10px 20px; border-radius:8px; cursor:pointer; 
+                   font-size:16px; margin-top:10px;">
+      🖨️ Imprimir / Baixar PDF
+    </button>
+
+    <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
+
+<style>
+  .img-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .img-container img {
+    width: 80%;              /* ocupa 80% da largura padrão */
+    max-width: 700px;        /* limite máximo no PC */
+    border-radius: 8px;      /* cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    height: auto;
+    transition: transform 0.3s ease; /* efeito suave ao passar o mouse */
+  }
+
+  .img-container img:hover {
+    transform: scale(1.02);  /* leve aumento ao passar o mouse */
+  }
+
+  /* 📱 Ajuste automático para telas menores */
+  @media (max-width: 768px) {
+    .img-container img {
+      width: 95%;            /* aumenta um pouco no celular */
+      max-width: none;
+    }
+  }
+</style>
+
+<div class="img-container">
+  <img src="img/positionmaq.jpg.png" 
+       alt="Esquema das máquinas - Bloco A - TPS">
 </div>
 
-    🖨️ Imprimir / Baixar PDF
-  </button>
-</header>
- <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
-
-<div style="display:flex; justify-content:center;">
-  <img src="img/positionmaq.jpg.png" alt="Etiqueta técnica - Posição das máquinas" style="max-width:80%; height:auto;">
-</div>
-
-    </div>
-
-  </header>
 
   <section>
     <h2>1. Objetivo do Serviço</h2>
@@ -167,85 +185,63 @@
         <th>Status</th>
       </tr>
       <tr><td>1</td><td>Consul</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
-      <tr><td>2</td><td>Midea (R32)</td><td>Gás perdido (R32 é inflamável)</td><td>Desinstalada</td></tr>
+      <tr><td>2</td><td>Midea (R32 – HFC)</td><td>Recolhimento não realizado (gás inflamável R32 – manuseio restrito)</td><td>Desinstalada</td></tr>
       <tr><td>3</td><td>Agratto</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
       <tr><td>4</td><td>Midea</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
       <tr><td>5</td><td>Gree</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
     </table>
- <h2>3.Observações:</h2>
-    <ol>
+
+    <!-- ⚠️ AVISO AMBIENTAL – GÁS R32 -->
+    <section style="
+      background-color: #fff8e6;
+      border-left: 6px solid #f7a30a;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 25px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    ">
+      <h3 style="color: #d87f00; margin-top: 0;">
+        ⚠️ Aviso Ambiental – Gás R32
+      </h3>
+      <p style="color: #444; text-align: justify; margin-bottom: 8px;">
+        Durante o processo de desinstalação foi confirmada a presença do fluido <strong>R32</strong> na unidade da máquina 2.  
+        Por se tratar de um gás inflamável e de manuseio restrito, <strong>o recolhimento integral não pôde ser realizado</strong> com segurança técnica.
+      </p>
+      <p style="color: #444; text-align: justify;">
+        A operação seguiu protocolos seguros e responsáveis, com registro técnico da perda do fluido <strong>sem caráter de descarte intencional</strong>.  
+        Foi orientado ao cliente sobre a necessidade de reposição do gás na reinstalação e destinação adequada por empresa especializada.
+      </p>
+    </section>
+
+    <h2>3. Observações</h2>
+    <ul>
       <li>As máquinas 4 e 5 não puderam ser retiradas, pois as salas estavam trancadas.</li>
-      <li>Os equipamentos foram devidamente separados; (condensadora e evaporadora) e isolados (entrada e saídas).</li>
-      <li>Realizamos o recolhimento do gás das demais máquinas preservando para a reinstalação da máquina</li>
-      <li>retificamos; ás perdido (R32 é inflamável, não pode ser recolhido).</li>
-       <ol>
-      <li>Instruimos o responsável técnico sobre melhoria na estrutura das condensadoras. Identificamos 
-        que os suportes das condensadoras 3 e 4 encontram-se enferrujados, desgastados e sem condições
-        adequadas de reutilização. As máquinas 1, 2 e 5 estavam instaladas diretamente no chão, expostas à sujeira e 
-        à água da chuva, o que acelera o desgaste do gabinete e reduz a durabilidade dos equipamentos. </li>
-<li>Proposta técnica: Que o cliente forneça 04 suportes metálicos reforçados, modelo flutuante, nas medidas 50x50 cm,
-         e 01 na medida de 40x40 confeccionados em cantoneira de 3”, e 01 com pintura anticorrosiva. </li>
-       </ol>
-       <h2>4. Consideração finais 1º dia 04/10/2025</h2>
-    <ol>
-      <li>O serviço foi executado de forma segura conforme as boas práticas e normas técnicas de segurança e da refrigeração. 
-        A equipe técnica aguarda liberação dos ambientes trancados para concluir o serviço em 06/10/2025. .</li>
-      
-    </ol>
-    <h2>5. Relatório de Atividades – 2º Dia 06/10/2025</h2>
-    <ol>
-      <li>Foi formalizado com o responsável técnico a confecção dos novos suportes metálicos (50x50 cm, cantoneira de 3”).</li>
+      <li>Os equipamentos foram devidamente separados e isolados (condensadora e evaporadora).</li>
+      <li>Realizamos o recolhimento do gás das demais máquinas, preservando o fluido para reinstalação.</li>
+      <li>Instruímos o responsável técnico sobre a necessidade de substituição dos suportes metálicos enferrujados.</li>
+      <li>Proposta técnica: fornecimento de 4 suportes reforçados 50x50 cm e 1 suporte 40x40 cm com pintura anticorrosiva.</li>
+    </ul>
+
+    <h2>4. Considerações Finais – 1º Dia (04/10/2025)</h2>
+    <p>O serviço foi executado de forma segura, conforme boas práticas e normas técnicas. A equipe técnica aguarda liberação dos ambientes trancados para concluir o serviço em 06/10/2025.</p>
+
+    <h2>5. Relatório de Atividades – 2º Dia (06/10/2025)</h2>
+    <ul>
+      <li>Formalizado com o responsável técnico a confecção dos novos suportes metálicos (50x50 cm, cantoneira de 3”).</li>
       <li>Salas trancadas foram abertas, permitindo acesso às máquinas 4 e 5.</li>
-      <li>A máquina 5 (Gree), instalada no chão, foi desinstalada e teve o gás recolhido com sucesso.</li>
-      <li>A máquina 4 (Midea) aguarda o novo suporte; não houve intervenção, pois depende da fabricação do cliente.</li>
-    </ol>
+      <li>A máquina 5 (Gree) foi desinstalada e teve o gás recolhido com sucesso.</li>
+      <li>A máquina 4 (Midea) aguarda instalação do novo suporte fornecido pelo cliente.</li>
+    </ul>
 
-    <h2>7. Galeria de Fotos</h2>
-
-    <div class="machine-card">
-      <h3>Máquina 1 – Consul</h3>
-      <div class="gallery">
-        <img src="img/maquina1_1.jpeg" alt="Esquema elétrico - Máquina 1">
-        <img src="img/maquina1_2.jpeg" alt="Etiqueta técnica - Máquina 1">
-        <img src="img/maquina1_3.jpeg" alt="Finalização - Máquina 1">
-      </div>
-    </div>
-
-    <div class="machine-card">
-      <h3>Máquina 2 – Midea (R32)</h3>
-      <div class="gallery">
-        <img src="img/maquina2_1.jpeg" alt="Esquema elétrico - Máquina 2">
-        <img src="img/maquina2_2.jpeg" alt="Etiqueta técnica - Máquina 2">
-        <img src="img/maquina2_3.jpeg" alt="Finalização - Máquina 2">
-      </div>
-    </div>
-
-    <div class="machine-card">
-      <h3>Máquina 3 – Agratto</h3>
-      <div class="gallery">
-        <img src="img/maquina3_1.jpg" alt="Esquema elétrico - Máquina 3">
-        <img src="img/maquina3_2.jpg" alt="Etiqueta técnica - Máquina 3">
-        <img src="img/maquina3_3.jpg" alt="Finalização - Máquina 3">
-      </div>
-    </div>
-
-    <div class="machine-card">
-      <h3>Máquina 4 – Midea</h3>
-      <div class="gallery">
-        <img src="img/maquina4_1.jpeg" alt="Esquema elétrico - Máquina 4">
-        <img src="img/maquina4_2.jpeg" alt="Etiqueta técnica - Máquina 4">
-        <img src="img/maquina4_3.jpeg" alt="Finalização - Máquina 4">
-      </div>
-    </div>
-
-    <div class="machine-card">
-      <h3>Máquina 5 – Gree</h3>
-      <div class="gallery">
-        <img src="img/maquina5_1.jpeg" alt="Esquema elétrico - Máquina 5">
-        <img src="img/maquina5_2.jpeg" alt="Etiqueta técnica - Máquina 5">
-        <img src="img/maquina5_3.jpeg" alt="Finalização - Máquina 5">
-      </div>
-    </div>
+    <h2>6. Galeria de Fotos</h2>
+    <p style="text-align:center;">
+      <a href="galerial2.html" target="_blank" 
+         style="display:inline-block; background-color:#f59e0b; color:white; 
+                padding:10px 20px; border-radius:8px; text-decoration:none; 
+                font-weight:bold;">
+        📸 Acessar galeria de imagens das máquinas
+      </a>
+    </p>
 
     <a href="Laudo_Tecnico_Desinstalacao_Ar_Condicionado.docx" class="download-btn" download>
       📄 Baixar Laudo Completo
