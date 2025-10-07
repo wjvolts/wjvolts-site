@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeria de Máquinas - WJVolts</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria de Fotos – Desinstalação de Ar Condicionado</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fffaf3;
-      margin: 0;
-      padding: 20px;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
       color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff8f0;
+      border-bottom: 4px solid #f7a30a;
+      padding: 20px;
       text-align: center;
     }
 
-    h1 {
-      color: #f59e0b;
+    header h1 {
+      color: #d87f00;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #666;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d87f00;
+      border-left: 6px solid #f7a30a;
+      padding-left: 10px;
+      margin-top: 30px;
     }
 
     .gallery {
@@ -23,44 +50,175 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 15px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .gallery img {
-      width: 280px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
+      width: 300px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
 
     .gallery img:hover {
       transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
     }
 
-    a.voltar {
-      display: inline-block;
-      margin-top: 30px;
-      background-color: #f59e0b;
+    /* --- Lightbox --- */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      animation: zoomIn 0.3s ease;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
       color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .lightbox-close:hover {
+      color: #f7a30a;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    footer {
+      background-color: #fff8f0;
+      border-top: 4px solid #f7a30a;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        width: 100%;
+      }
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #f7a30a;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #d87f00;
     }
   </style>
 </head>
 <body>
-  <h1>Galeria de Imagens das Máquinas</h1>
+  <header>
+    <h1>Galeria de Fotos</h1>
+    <p>Desinstalação de Aparelhos de Ar Condicionado – WJVolts</p>
+    <a href="index.html" class="back-btn">⬅️ Voltar ao Laudo</a>
+  </header>
 
-  <div class="gallery">
-    <img src="img/imgmaquina1_1.jpeg" alt="Máquina 1">
-    <img src="img/imgmaquina2_1.jpeg" alt="Máquina 2">
-    <img src="img/imgmaquina3_1.jpeg" alt="Máquina 3">
-    <img src="img/imgmaquina4_1.jpeg" alt="Máquina 4">
-    <img src="img/imgmaquina5_1.jpeg" alt="Máquina 5">
+  <section>
+    <h2>Máquina 1 – Consul</h2>
+    <div class="gallery">
+      <img src="img/imgmaquina1_1.jpeg" alt="Máquina 1 - Etapa 1" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina1_2.jpeg" alt="Máquina 1 - Etapa 2" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina1_3.jpeg" alt="Máquina 1 - Etapa 3" onclick="openLightbox(this.src)">
+    </div>
+
+    <h2>Máquina 2 – Midea (R32)</h2>
+    <div class="gallery">
+      <img src="img/imgmaquina2_1.jpeg" alt="Máquina 2 - Etapa 1" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina2_2.jpeg" alt="Máquina 2 - Etapa 2" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina2_3.jpeg" alt="Máquina 2 - Etapa 3" onclick="openLightbox(this.src)">
+    </div>
+
+    <h2>Máquina 3 – Agratto</h2>
+    <div class="gallery">
+      <img src="img/imgmaquina3_1.jpeg" alt="Máquina 3 - Etapa 1" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina3_2.jpeg" alt="Máquina 3 - Etapa 2" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina3_3.jpeg" alt="Máquina 3 - Etapa 3" onclick="openLightbox(this.src)">
+    </div>
+
+    <h2>Máquina 4 – Midea</h2>
+    <div class="gallery">
+      <img src="img/imgmaquina4_1.jpeg" alt="Máquina 4 - Etapa 1" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina4_2.jpeg" alt="Máquina 4 - Etapa 2" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina4_3.jpeg" alt="Máquina 4 - Etapa 3" onclick="openLightbox(this.src)">
+    </div>
+
+    <h2>Máquina 5 – Gree</h2>
+    <div class="gallery">
+      <img src="img/imgmaquina5_1.jpeg" alt="Máquina 5 - Etapa 1" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina5_2.jpeg" alt="Máquina 5 - Etapa 2" onclick="openLightbox(this.src)">
+      <img src="img/imgmaquina5_3.jpeg" alt="Máquina 5 - Etapa 3" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <a href="#" class="lightbox-close" onclick="closeLightbox(event)">×</a>
+    <img id="lightbox-img" src="" alt="Imagem ampliada">
   </div>
 
-  <a href="laudo2.html" class="voltar">⬅ Voltar para o Laudo</a>
+  <footer>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+    <p>Campo Grande, Cariacica – ES</p>
+    <p>© 2025 WJVolts. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function openLightbox(src) {
+      const lightbox = document.getElementById("lightbox");
+      const img = document.getElementById("lightbox-img");
+      img.src = src;
+      lightbox.style.display = "flex";
+    }
+
+    function closeLightbox(event) {
+      if (event) event.preventDefault();
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
 </body>
 </html>
