@@ -199,15 +199,7 @@
       <li>A máquina 5 (Gree), instalada no chão, foi desinstalada e teve o gás recolhido com sucesso.</li>
       <li>A máquina 4 (Midea) aguarda o novo suporte; não houve intervenção, pois depende da fabricação do cliente.</li>
     </ol>
-
-  <style>
-  img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin: 10px;
-  }
-
+<style>
   .gallery {
     display: flex;
     justify-content: center;
@@ -215,9 +207,17 @@
     gap: 10px;
   }
 
+  .gallery img {
+    width: 220px;   /* antes era 300px */
+    height: auto;
+    border-radius: 8px;
+    margin: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
   .machine-card {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   h2 {
@@ -231,7 +231,7 @@
     background-color: #f59e0b;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
@@ -289,6 +289,7 @@
     <img src="img/imgmaquina5_3.jpeg" alt="Finalização - Máquina 5">
   </div>
 </div>
+
     <a href="Laudo_Tecnico_Desinstalacao_Ar_Condicionado.docx" class="download-btn" download>
       📄 Baixar Laudo Completo
     </a>
