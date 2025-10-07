@@ -162,10 +162,47 @@
   }
 </style>
 
-<div class="img-container">
-  <img src="img/positionmaq.jpg.png" 
-       alt="Esquema das máquinas - Bloco A - TPS">
-</div>
+<style>
+/* --- tamanho normal na tela (mantém responsivo) --- */
+.img-container img {
+  width: 100%;
+  max-width: 700px;   /* limite visual no navegador */
+  height: auto;
+}
+
+/* --- ajustes específicos para impressão/PDF --- */
+@media print {
+  /* reduz o cabeçalho para não ocupar tanto espaço (se quiser manter maior, altere) */
+  header {
+    padding: 10px;
+  }
+
+  /* força o layout da section para ocupar a página corretamente */
+  section {
+    padding: 10px;
+  }
+
+  /* imagem menor somente na impressão — escolhemos 60% / max 600px */
+  .img-container img {
+    width: 60%;
+    max-width: 600px;   /* nunca ultrapassar esse valor em px ao imprimir */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* evita que imagem e cabeçalho sejam separadas em páginas diferentes */
+  header, .img-container {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* esconde coisas desnecessárias na impressão (opcional) */
+  .download-btn, .back-btn, .print-btn {
+    display: none !important;
+  }
+}
+</style>
 
 
   <section>
@@ -190,28 +227,27 @@
       <tr><td>4</td><td>Midea</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
       <tr><td>5</td><td>Gree</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
     </table>
+<section style="margin-top: 30px; line-height: 1.6; background-color: #fff7e6; padding: 15px 25px; border-left: 6px solid #f59e0b; border-radius: 8px;">
+  <h2 style="color: #f59e0b; text-align: left; margin-bottom: 10px;">
+    ⚠️♻️ Observação sobre o fluido refrigerante (R32)
+  </h2>
 
-    <!-- ⚠️ AVISO AMBIENTAL – GÁS R32 -->
-    <section style="
-      background-color: #fff8e6;
-      border-left: 6px solid #f7a30a;
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin: 25px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    ">
-      <h3 style="color: #d87f00; margin-top: 0;">
-        ⚠️ Aviso Ambiental – Gás R32
-      </h3>
-      <p style="color: #444; text-align: justify; margin-bottom: 8px;">
-        Durante o processo de desinstalação foi confirmada a presença do fluido <strong>R32</strong> na unidade da máquina 2.  
-        Por se tratar de um gás inflamável e de manuseio restrito, <strong>o recolhimento integral não pôde ser realizado</strong> com segurança técnica.
-      </p>
-      <p style="color: #444; text-align: justify;">
-        A operação seguiu protocolos seguros e responsáveis, com registro técnico da perda do fluido <strong>sem caráter de descarte intencional</strong>.  
-        Foi orientado ao cliente sobre a necessidade de reposição do gás na reinstalação e destinação adequada por empresa especializada.
-      </p>
-    </section>
+  <p style="color: #333;">
+    Durante o processo de desinstalação dos equipamentos, foi verificada a presença de fluido refrigerante 
+    <strong style="color:#d97706;">R32</strong> em algumas unidades.  
+    Devido às características técnicas do fluido — inflamável e de alta pressão — e à ausência de cilindro de recolhimento específico no local, 
+    <strong style="color:#d97706;">não foi possível realizar o recolhimento completo do gás</strong>.  
+  </p>
+
+  <p style="color: #333;">
+    A operação foi conduzida de forma <strong style="color:#d97706;">segura e controlada</strong>, evitando riscos de ignição ou exposição.  
+    Ressaltamos que a <strong style="color:#d97706;">WJVolts atua em conformidade com as boas práticas técnicas e ambientais</strong>, 
+    recomendando que, em futuras intervenções, seja disponibilizado 
+    <strong style="color:#d97706;">cilindro apropriado para recolhimento e destinação ambientalmente correta</strong> do fluido, 
+    conforme legislação vigente (<em>Lei nº 9.605/98</em> e <em>Resolução CONAMA nº 267/2000</em>).
+  </p>
+</section>
+
 
     <h2>3. Observações</h2>
     <ul>
