@@ -117,6 +117,48 @@
         max-width: none;
       }
     }
+    <style>
+/* --- tamanho normal na tela (mantém responsivo) --- */
+.img-container img {
+  width: 100%;
+  max-width: 700px;   /* limite visual no navegador */
+  height: auto;
+}
+
+/* --- ajustes específicos para impressão/PDF --- */
+@media print {
+  /* reduz o cabeçalho para não ocupar tanto espaço (se quiser manter maior, altere) */
+  header {
+    padding: 10px;
+  }
+
+  /* força o layout da section para ocupar a página corretamente */
+  section {
+    padding: 10px;
+  }
+
+  /* imagem menor somente na impressão — escolhemos 60% / max 600px */
+  .img-container img {
+    width: 60%;
+    max-width: 600px;   /* nunca ultrapassar esse valor em px ao imprimir */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* evita que imagem e cabeçalho sejam separadas em páginas diferentes */
+  header, .img-container {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* esconde coisas desnecessárias na impressão (opcional) */
+  .download-btn, .back-btn, .print-btn {
+    display: none !important;
+  }
+}
+</style>
+
   </style>
 </head>
 
