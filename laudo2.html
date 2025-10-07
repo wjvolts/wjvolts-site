@@ -83,7 +83,7 @@
 
     footer {
       background-color: #fff8f0;
-      text-align: center;
+      text-align: left;
       padding: 20px;
       border-top: 4px solid #f7a30a;
       color: #555;
@@ -133,54 +133,51 @@
 
 <!-- Seção da imagem - Posição das máquinas -->
 <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
-
-<div class="img-container" style="text-align:center;">
-  <img src="img/positionmaq.jpg.png" 
-       alt="Esquema das máquinas - Bloco A - TPS" 
-       style="border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); max-width:100%; height:auto;">
+<div class="img-container">
+  <img src="img/positionmaq.jpg" alt="Esquema das máquinas - Bloco A - TPS">
 </div>
 
 <style>
-/* --- Exibição normal na tela --- */
-.img-container img {
-  width: 100%;
-  max-width: 700px;  /* Mantém boa proporção visual na tela */
-  height: auto;
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-/* --- Ajuste para impressão/PDF --- */
-@media print {
-  header {
-    padding: 10px;
-  }
+.img-container img {
+  width: 80%;              /* ocupa 80% da largura padrão */
+  max-width: 700px;        /* limite máximo no PC */
+  border-radius: 8px;      /* cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  height: auto;
+  transition: transform 0.3s ease; /* efeito suave ao passar o mouse */
+}
 
-  section {
-    padding: 10px;
-  }
+.img-container img:hover {
+  transform: scale(1.02);  /* leve aumento ao passar o mouse */
+}
 
-  /* Diminui a imagem só na impressão para caber na 1ª página */
+/* 📱 Ajuste automático para telas menores */
+@media (max-width: 768px) {
   .img-container img {
-    width: 70%;
-    max-width: 650px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 95%;            /* aumenta um pouco no celular */
+    max-width: none;
   }
+}
 
-  /* Evita quebra de página entre o cabeçalho e a imagem */
+/* 🖨️ Ajuste para PDF / impressão */
+@media print {
+  .img-container img {
+    width: 65%;          /* leve redução só na impressão */
+    max-width: 600px;    /* garante que caiba na mesma página do cabeçalho */
+    margin: 0 auto;
+    display: block;
+  }
   header, .img-container {
     page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  /* Esconde botões ao imprimir */
-  .download-btn, .back-btn, .print-btn {
-    display: none !important;
   }
 }
 </style>
-
-
 
   <section>
     <h2>1. Objetivo do Serviço</h2>
@@ -247,7 +244,7 @@
     </ul>
 
     <h2>6. Galeria de Fotos</h2>
-    <p style="text-align:center;">
+    <p style="text-align:left;">
       <a href="galerial2.html" target="_blank" 
          style="display:inline-block; background-color:#f59e0b; color:white; 
                 padding:10px 20px; border-radius:8px; text-decoration:none; 
