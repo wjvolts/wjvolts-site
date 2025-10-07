@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Máquinas - WJVolts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf3;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    h1 {
+      color: #f59e0b;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a.voltar {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #f59e0b;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeria de Imagens das Máquinas</h1>
+
+  <div class="gallery">
+    <img src="img/imgmaquina1_1.jpeg" alt="Máquina 1">
+    <img src="img/imgmaquina2_1.jpeg" alt="Máquina 2">
+    <img src="img/imgmaquina3_1.jpeg" alt="Máquina 3">
+    <img src="img/imgmaquina4_1.jpeg" alt="Máquina 4">
+    <img src="img/imgmaquina5_1.jpeg" alt="Máquina 5">
+  </div>
+
+  <a href="laudo2.html" class="voltar">⬅ Voltar para o Laudo</a>
+</body>
+</html>
