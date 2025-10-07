@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria de Fotos – Desinstalação de Ar Condicionado</title>
+  <title>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</title>
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -21,13 +21,17 @@
       text-align: center;
     }
 
+    header img {
+      max-height: 80px;
+    }
+
     header h1 {
       color: #d87f00;
-      margin-bottom: 5px;
+      margin: 10px 0 5px;
     }
 
     header p {
-      color: #666;
+      color: #444;
       font-size: 14px;
       margin: 0;
     }
@@ -42,90 +46,73 @@
       color: #d87f00;
       border-left: 6px solid #f7a30a;
       padding-left: 10px;
-      margin-top: 30px;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table th {
+      background-color: #f7a30a;
+      color: white;
+    }
+
+    .machine-card {
+      border: 2px solid #f7a30a;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px 0;
+      background: #fffdf8;
+    }
+
+    .machine-card h3 {
+      color: #d87f00;
+      margin-top: 0;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
+      gap: 10px;
       margin-top: 10px;
     }
 
     .gallery img {
-      width: 300px;
-      border-radius: 10px;
+      width: 32%;
+      border-radius: 8px;
       border: 1px solid #ccc;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
     }
 
-    .gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    }
-
-    /* --- Lightbox --- */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.9);
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 85%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-      animation: zoomIn 0.3s ease;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 30px;
-      right: 40px;
-      font-size: 40px;
-      color: white;
+    .download-btn {
+      display: inline-block;
+      background-color: #f7a30a;
+      color: #fff;
+      padding: 12px 20px;
       text-decoration: none;
+      border-radius: 6px;
       font-weight: bold;
+      margin: 15px 0;
+      transition: 0.3s;
     }
 
-    .lightbox-close:hover {
-      color: #f7a30a;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes zoomIn {
-      from { transform: scale(0.8); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    .download-btn:hover {
+      background-color: #d87f00;
     }
 
     footer {
       background-color: #fff8f0;
-      border-top: 4px solid #f7a30a;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      border-top: 4px solid #f7a30a;
       color: #555;
-      margin-top: 40px;
+      font-size: 14px;
     }
 
     @media (max-width: 768px) {
@@ -133,92 +120,142 @@
         width: 100%;
       }
     }
-
-    .back-btn {
-      display: inline-block;
-      background-color: #f7a30a;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 15px;
-      transition: 0.3s;
-    }
-
-    .back-btn:hover {
-      background-color: #d87f00;
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Galeria de Fotos</h1>
-    <p>Desinstalação de Aparelhos de Ar Condicionado – WJVolts</p>
-    <a href="index.html" class="back-btn">⬅️ Voltar ao Laudo</a>
+    <div style="text-align: center;">
+  <img src="img/logo-wjvolts...png" alt="Logo WJVolts" style="height:100px;">
+  <h1>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</h1>
+  <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+
+  <button onclick="window.print()" 
+          style="background-color:#f59e0b; color:white; border:none; 
+                 padding:10px 20px; border-radius:8px; cursor:pointer; 
+                 font-size:16px; margin-top:10px;">
+    🖨️ Imprimir / Baixar PDF
+  </button>
+</div>
+
+    🖨️ Imprimir / Baixar PDF
+  </button>
+</header>
+ <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
+
+<div style="display:flex; justify-content:center;">
+  <img src="img/positionmaq.jpg.png" alt="Etiqueta técnica - Posição das máquinas" style="max-width:80%; height:auto;">
+</div>
+
+    </div>
+
   </header>
 
   <section>
-    <h2>Máquina 1 – Consul</h2>
-    <div class="gallery">
-      <img src="img/imgmaquina1_1.jpeg" alt="Máquina 1 - Etapa 1" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina1_2.jpeg" alt="Máquina 1 - Etapa 2" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina1_3.jpeg" alt="Máquina 1 - Etapa 3" onclick="openLightbox(this.src)">
+    <h2>1. Objetivo do Serviço</h2>
+    <p>
+      Atender à solicitação do cliente para desinstalação de 5 (cinco) aparelhos de ar-condicionado tipo Split,
+      devido à reforma das salas onde os equipamentos estão instalados. Após a conclusão da reforma,
+      os equipamentos serão reinstalados no mesmo local, conforme planejamento.
+    </p>
+
+    <h2>2. Resumo das Atividades Executadas – Dia 04/10/2025</h2>
+    <table class="table">
+      <tr>
+        <th>Nº da Máquina</th>
+        <th>Marca/Modelo</th>
+        <th>Situação do Gás</th>
+        <th>Status</th>
+      </tr>
+      <tr><td>1</td><td>Consul</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
+      <tr><td>2</td><td>Midea (R32)</td><td>Gás perdido (R32 é inflamável)</td><td>Desinstalada</td></tr>
+      <tr><td>3</td><td>Agratto</td><td>Gás recolhido com sucesso</td><td>Desinstalada</td></tr>
+      <tr><td>4</td><td>Midea</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
+      <tr><td>5</td><td>Gree</td><td>Não acessada (sala trancada)</td><td>Pendente</td></tr>
+    </table>
+ <h2>3.Observações:</h2>
+    <ol>
+      <li>As máquinas 4 e 5 não puderam ser retiradas, pois as salas estavam trancadas.</li>
+      <li>Os equipamentos foram devidamente separados; (condensadora e evaporadora) e isolados (entrada e saídas).</li>
+      <li>Realizamos o recolhimento do gás das demais máquinas preservando para a reinstalação da máquina</li>
+      <li>retificamos; ás perdido (R32 é inflamável, não pode ser recolhido).</li>
+       <ol>
+      <li>Instruimos o responsável técnico sobre melhoria na estrutura das condensadoras. Identificamos 
+        que os suportes das condensadoras 3 e 4 encontram-se enferrujados, desgastados e sem condições
+        adequadas de reutilização. As máquinas 1, 2 e 5 estavam instaladas diretamente no chão, expostas à sujeira e 
+        à água da chuva, o que acelera o desgaste do gabinete e reduz a durabilidade dos equipamentos. </li>
+<li>Proposta técnica: Que o cliente forneça 04 suportes metálicos reforçados, modelo flutuante, nas medidas 50x50 cm,
+         e 01 na medida de 40x40 confeccionados em cantoneira de 3”, e 01 com pintura anticorrosiva. </li>
+       </ol>
+       <h2>4. Consideração finais 1º dia 04/10/2025</h2>
+    <ol>
+      <li>O serviço foi executado de forma segura conforme as boas práticas e normas técnicas de segurança e da refrigeração. 
+        A equipe técnica aguarda liberação dos ambientes trancados para concluir o serviço em 06/10/2025. .</li>
+      
+    </ol>
+    <h2>5. Relatório de Atividades – 2º Dia 06/10/2025</h2>
+    <ol>
+      <li>Foi formalizado com o responsável técnico a confecção dos novos suportes metálicos (50x50 cm, cantoneira de 3”).</li>
+      <li>Salas trancadas foram abertas, permitindo acesso às máquinas 4 e 5.</li>
+      <li>A máquina 5 (Gree), instalada no chão, foi desinstalada e teve o gás recolhido com sucesso.</li>
+      <li>A máquina 4 (Midea) aguarda o novo suporte; não houve intervenção, pois depende da fabricação do cliente.</li>
+    </ol>
+
+    <h2>7. Galeria de Fotos</h2>
+
+    <div class="machine-card">
+      <h3>Máquina 1 – Consul</h3>
+      <div class="gallery">
+        <img src="img/maquina1_1.jpeg" alt="Esquema elétrico - Máquina 1">
+        <img src="img/maquina1_2.jpeg" alt="Etiqueta técnica - Máquina 1">
+        <img src="img/maquina1_3.jpeg" alt="Finalização - Máquina 1">
+      </div>
     </div>
 
-    <h2>Máquina 2 – Midea (R32)</h2>
-    <div class="gallery">
-      <img src="img/imgmaquina2_1.jpeg" alt="Máquina 2 - Etapa 1" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina2_2.jpeg" alt="Máquina 2 - Etapa 2" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina2_3.jpeg" alt="Máquina 2 - Etapa 3" onclick="openLightbox(this.src)">
+    <div class="machine-card">
+      <h3>Máquina 2 – Midea (R32)</h3>
+      <div class="gallery">
+        <img src="img/maquina2_1.jpeg" alt="Esquema elétrico - Máquina 2">
+        <img src="img/maquina2_2.jpeg" alt="Etiqueta técnica - Máquina 2">
+        <img src="img/maquina2_3.jpeg" alt="Finalização - Máquina 2">
+      </div>
     </div>
 
-    <h2>Máquina 3 – Agratto</h2>
-    <div class="gallery">
-      <img src="img/imgmaquina3_1.jpeg" alt="Máquina 3 - Etapa 1" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina3_2.jpeg" alt="Máquina 3 - Etapa 2" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina3_3.jpeg" alt="Máquina 3 - Etapa 3" onclick="openLightbox(this.src)">
+    <div class="machine-card">
+      <h3>Máquina 3 – Agratto</h3>
+      <div class="gallery">
+        <img src="img/maquina3_1.jpg" alt="Esquema elétrico - Máquina 3">
+        <img src="img/maquina3_2.jpg" alt="Etiqueta técnica - Máquina 3">
+        <img src="img/maquina3_3.jpg" alt="Finalização - Máquina 3">
+      </div>
     </div>
 
-    <h2>Máquina 4 – Midea</h2>
-    <div class="gallery">
-      <img src="img/imgmaquina4_1.jpeg" alt="Máquina 4 - Etapa 1" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina4_2.jpeg" alt="Máquina 4 - Etapa 2" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina4_3.jpeg" alt="Máquina 4 - Etapa 3" onclick="openLightbox(this.src)">
+    <div class="machine-card">
+      <h3>Máquina 4 – Midea</h3>
+      <div class="gallery">
+        <img src="img/maquina4_1.jpeg" alt="Esquema elétrico - Máquina 4">
+        <img src="img/maquina4_2.jpeg" alt="Etiqueta técnica - Máquina 4">
+        <img src="img/maquina4_3.jpeg" alt="Finalização - Máquina 4">
+      </div>
     </div>
 
-    <h2>Máquina 5 – Gree</h2>
-    <div class="gallery">
-      <img src="img/imgmaquina5_1.jpeg" alt="Máquina 5 - Etapa 1" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina5_2.jpeg" alt="Máquina 5 - Etapa 2" onclick="openLightbox(this.src)">
-      <img src="img/imgmaquina5_3.jpeg" alt="Máquina 5 - Etapa 3" onclick="openLightbox(this.src)">
+    <div class="machine-card">
+      <h3>Máquina 5 – Gree</h3>
+      <div class="gallery">
+        <img src="img/maquina5_1.jpeg" alt="Esquema elétrico - Máquina 5">
+        <img src="img/maquina5_2.jpeg" alt="Etiqueta técnica - Máquina 5">
+        <img src="img/maquina5_3.jpeg" alt="Finalização - Máquina 5">
+      </div>
     </div>
+
+    <a href="Laudo_Tecnico_Desinstalacao_Ar_Condicionado.docx" class="download-btn" download>
+      📄 Baixar Laudo Completo
+    </a>
   </section>
-
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <a href="#" class="lightbox-close" onclick="closeLightbox(event)">×</a>
-    <img id="lightbox-img" src="" alt="Imagem ampliada">
-  </div>
 
   <footer>
     <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
     <p>Campo Grande, Cariacica – ES</p>
     <p>© 2025 WJVolts. Todos os direitos reservados.</p>
   </footer>
-
-  <script>
-    function openLightbox(src) {
-      const lightbox = document.getElementById("lightbox");
-      const img = document.getElementById("lightbox-img");
-      img.src = src;
-      lightbox.style.display = "flex";
-    }
-
-    function closeLightbox(event) {
-      if (event) event.preventDefault();
-      document.getElementById("lightbox").style.display = "none";
-    }
-  </script>
 </body>
 </html>
