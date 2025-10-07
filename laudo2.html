@@ -200,53 +200,95 @@
       <li>A máquina 4 (Midea) aguarda o novo suporte; não houve intervenção, pois depende da fabricação do cliente.</li>
     </ol>
 
-    <h2>7. Galeria de Fotos</h2>
+  <style>
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px;
+  }
 
-    <div class="machine-card">
-      <h3>Máquina 1 – Consul</h3>
-      <div class="gallery">
-        <img src="img/imgmaquina1_1.jpeg" alt="Esquema elétrico - Máquina 1">
-        <img src="img/imgmaquina1_2.jpeg" alt="Etiqueta técnica - Máquina 1">
-        <img src="img/imgmaquina1_3.jpeg" alt="Finalização - Máquina 1">
-      </div>
-    </div>
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-    <div class="machine-card">
-      <h3>Máquina 2 – Midea (R32)</h3>
-      <div class="gallery">
-        <img src="img/imgmaquina2_1.jpeg" alt="Esquema elétrico - Máquina 2">
-        <img src="img/imgmaquina2_2.jpeg" alt="Etiqueta técnica - Máquina 2">
-        <img src="img/imgmaquina2_3.jpeg" alt="Finalização - Máquina 2">
-      </div>
-    </div>
+  .machine-card {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-    <div class="machine-card">
-      <h3>Máquina 3 – Agratto</h3>
-      <div class="gallery">
-        <img src="img/imgmaquina3_1.jpeg" alt="Esquema elétrico - Máquina 3">
-        <img src="img/imgmaquina3_2.jpeg" alt="Etiqueta técnica - Máquina 3">
-        <img src="img/imgmaquina3_3.jpeg" alt="Finalização - Máquina 3">
-      </div>
-    </div>
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+  }
 
-    <div class="machine-card">
-      <h3>Máquina 4 – Midea</h3>
-      <div class="gallery">
-        <img src="img/imgmaquina4_1.jpeg" alt="Esquema elétrico - Máquina 4">
-        <img src="img/imgmaquina4_2.jpeg" alt="Etiqueta técnica - Máquina 4">
-        <img src="img/imgmaquina4_3.jpeg" alt="Finalização - Máquina 4">
-      </div>
-    </div>
+  button.print-btn {
+    display: block;
+    margin: 40px auto;
+    background-color: #f59e0b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
 
-    <div class="machine-card">
-      <h3>Máquina 5 – Gree</h3>
-      <div class="gallery">
-        <img src="img/imgmaquina5_1.jpeg" alt="Esquema elétrico - Máquina 5">
-        <img src="img/imgmaquina5_2.jpeg" alt="Etiqueta técnica - Máquina 5">
-        <img src="img/imgmaquina5_3.jpeg" alt="Finalização - Máquina 5">
-      </div>
-    </div>
+  button.print-btn:hover {
+    background-color: #d97706;
+  }
+</style>
 
+<!-- ===== CONTEÚDO ===== -->
+<h2>7. Galeria de Fotos</h2>
+
+<div class="machine-card">
+  <h3>Máquina 1 – Consul</h3>
+  <div class="gallery">
+    <img src="img/imgmaquina1_1.jpeg" alt="Esquema elétrico - Máquina 1">
+    <img src="img/imgmaquina1_2.jpeg" alt="Etiqueta técnica - Máquina 1">
+    <img src="img/imgmaquina1_3.jpeg" alt="Finalização - Máquina 1">
+  </div>
+</div>
+
+<div class="machine-card">
+  <h3>Máquina 2 – Midea (R32)</h3>
+  <div class="gallery">
+    <img src="img/imgmaquina2_1.jpeg" alt="Esquema elétrico - Máquina 2">
+    <img src="img/imgmaquina2_2.jpeg" alt="Etiqueta técnica - Máquina 2">
+    <img src="img/imgmaquina2_3.jpeg" alt="Finalização - Máquina 2">
+  </div>
+</div>
+
+<div class="machine-card">
+  <h3>Máquina 3 – Agratto</h3>
+  <div class="gallery">
+    <img src="img/imgmaquina3_1.jpeg" alt="Esquema elétrico - Máquina 3">
+    <img src="img/imgmaquina3_2.jpeg" alt="Etiqueta técnica - Máquina 3">
+    <img src="img/imgmaquina3_3.jpeg" alt="Finalização - Máquina 3">
+  </div>
+</div>
+
+<div class="machine-card">
+  <h3>Máquina 4 – Midea</h3>
+  <div class="gallery">
+    <img src="img/imgmaquina4_1.jpeg" alt="Esquema elétrico - Máquina 4">
+    <img src="img/imgmaquina4_2.jpeg" alt="Etiqueta técnica - Máquina 4">
+    <img src="img/imgmaquina4_3.jpeg" alt="Finalização - Máquina 4">
+  </div>
+</div>
+
+<div class="machine-card">
+  <h3>Máquina 5 – Gree</h3>
+  <div class="gallery">
+    <img src="img/imgmaquina5_1.jpeg" alt="Esquema elétrico - Máquina 5">
+    <img src="img/imgmaquina5_2.jpeg" alt="Etiqueta técnica - Máquina 5">
+    <img src="img/imgmaquina5_3.jpeg" alt="Finalização - Máquina 5">
+  </div>
+</div>
     <a href="Laudo_Tecnico_Desinstalacao_Ar_Condicionado.docx" class="download-btn" download>
       📄 Baixar Laudo Completo
     </a>
