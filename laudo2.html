@@ -131,11 +131,50 @@
       🖨️ Imprimir / Baixar PDF
     </button>
 
-    <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
-    <div class="img-container">
-      <img src="img/positionmaq.jpg.png" alt="Esquema das máquinas - Bloco A - TPS">
-    </div>
-  </header>
+  <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
+
+<style>
+  .img-container {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .img-container img {
+    width: 70%;              /* 🔧 ajustado — antes 80%, agora cabe na página A4 */
+    max-width: 650px;        /* limite máximo no PC */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .img-container img:hover {
+    transform: scale(1.02);
+  }
+
+  @media print {
+    .img-container img {
+      width: 60%;            /* 🔧 versão para PDF */
+      max-width: 600px;
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .img-container img {
+      width: 95%;
+      max-width: none;
+    }
+  }
+</style>
+
+<div class="img-container">
+  <img src="img/positionmaq.jpg.png" 
+       alt="Esquema das máquinas - Bloco A - TPS">
+</div>
+
 
   <section>
     <h2>1. Objetivo do Serviço</h2>
