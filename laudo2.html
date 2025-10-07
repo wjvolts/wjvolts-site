@@ -141,53 +141,41 @@ header, footer {
       🖨️ Imprimir / Baixar PDF
     </button>
 
-<!-- Seção da imagem - Posição das máquinas -->
 <h3 style="text-align:center;">Posição das máquinas no Bloco A - TPS</h3>
-<div class="img-container">
-  <img src="img/positionmaq.jpg.png" alt="Esquema das máquinas - Bloco A - TPS">
-</div>
 
 <style>
-.img-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
+  .img-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
 
-.img-container img {
-  width: 80%;              /* ocupa 80% da largura padrão */
-  max-width: 700px;        /* limite máximo no PC */
-  border-radius: 8px;      /* cantos arredondados */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  height: auto;
-  transition: transform 0.3s ease; /* efeito suave ao passar o mouse */
-}
-
-.img-container img:hover {
-  transform: scale(1.02);  /* leve aumento ao passar o mouse */
-}
-
-/* 📱 Ajuste automático para telas menores */
-@media (max-width: 768px) {
   .img-container img {
-    width: 95%;            /* aumenta um pouco no celular */
-    max-width: none;
+    width: 80%;              /* ocupa 80% da largura padrão */
+    max-width: 700px;        /* limite máximo no PC */
+    border-radius: 8px;      /* cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    height: auto;
+    transition: transform 0.3s ease; /* efeito suave ao passar o mouse */
   }
-}
 
-/* 🖨️ Ajuste para PDF / impressão */
-@media print {
-  .img-container img {
-    width: 65%;          /* leve redução só na impressão */
-    max-width: 600px;    /* garante que caiba na mesma página do cabeçalho */
-    margin: 0 auto;
-    display: block;
+  .img-container img:hover {
+    transform: scale(1.02);  /* leve aumento ao passar o mouse */
   }
-  header, .img-container {
-    page-break-inside: avoid;
+
+  /* 📱 Ajuste automático para telas menores */
+  @media (max-width: 768px) {
+    .img-container img {
+      width: 95%;            /* aumenta um pouco no celular */
+      max-width: none;
+    }
   }
-}
 </style>
+
+<div class="img-container">
+  <img src="img/positionmaq.jpg.png" 
+       alt="Esquema das máquinas - Bloco A - TPS">
+</div>
 
   <section>
     <h2>1. Objetivo do Serviço</h2>
