@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orçamento – Rede Elétrica e Rede de Dados</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orçamento; rede elétrica e rede de dados, TPS</title>
 
   <style>
+    /* --- garante que apenas o conteúdo das seções fique à esquerda --- */
+    section, section p, section li, section div, section h3, section h4 {
+      text-align: left !important;
+    }
+
+    /* mantém cabeçalho e rodapé centralizados */
+    header, footer {
+      text-align: center;
+    }
+
     body {
       font-family: "Segoe UI", sans-serif;
       background-color: #fff;
@@ -15,10 +25,6 @@
       line-height: 1.6;
     }
 
-    header, footer {
-      text-align: center;
-    }
-
     header {
       background-color: #fff8f0;
       border-bottom: 4px solid #f7a30a;
@@ -26,17 +32,24 @@
     }
 
     header img {
-      max-width: 100%;
-      height: auto;
-      max-height: 350px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-height: 80px;
     }
 
-    h1 {
+    header h1 {
       color: #d87f00;
-      margin-top: 15px;
-      font-size: 1.8rem;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      color: #444;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     h2 {
@@ -46,21 +59,10 @@
       text-align: left;
     }
 
-    section {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-      text-align: left;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
     .table {
       border-collapse: collapse;
       width: 100%;
-      margin: 20px 0;
+      margin: 15px 0;
     }
 
     .table th, .table td {
@@ -71,14 +73,6 @@
     .table th {
       background-color: #f7a30a;
       color: white;
-    }
-
-    footer {
-      background-color: #fff8f0;
-      border-top: 4px solid #f7a30a;
-      padding: 20px;
-      font-size: 14px;
-      color: #555;
     }
 
     .download-btn {
@@ -97,12 +91,66 @@
       background-color: #d87f00;
     }
 
+    footer {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 20px;
+      border-top: 4px solid #f7a30a;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* --- imagem responsiva e de alta qualidade --- */
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 0;
+    }
+
+    .img-container img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .img-container img {
+        width: 95%;
+        max-width: none;
+      }
+    }
+
+    /* --- impressão --- */
     @media print {
+      header {
+        padding: 10px;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+      .img-container img {
+        width: 70%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      header, .img-container {
+        page-break-inside: avoid;
+      }
+
       .download-btn, .print-btn {
         display: none !important;
-      }
-      header img {
-        max-height: 200px;
       }
     }
   </style>
@@ -110,9 +158,8 @@
 
 <body>
   <header>
-    <img src="img/logo-wjvolts...png" 
-         alt="Planta de Rede Elétrica e de Dados">
-    <h1>Orçamento – Rede Elétrica e Rede de Dados</h1>
+    <img src="img/logo-wjvolts.png" alt="Logo WJVolts">
+    <h1>Laudo Técnico – Desinstalação de Aparelhos de Ar Condicionado</h1>
     <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
 
     <button onclick="window.print()" 
