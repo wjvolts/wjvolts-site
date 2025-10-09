@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orçamento - Pedro; sala escritório da oficina - TPS</title>
+
+  <style>
+    /* --- garante que apenas o conteúdo das seções fique à esquerda --- */
+    section, section p, section li, section div, section h3, section h4 {
+      text-align: left !important;
+    }
+
+    /* mantém cabeçalho e rodapé centralizados */
+    header, footer {
+      text-align: center;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fff8f0;
+      border-bottom: 4px solid #f7a30a;
+      padding: 20px;
+    }
+
+    header img {
+      max-height: 80px;
+    }
+
+    header h1 {
+      color: #d87f00;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      color: #444;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d87f00;
+      border-left: 6px solid #f7a30a;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 15px 0;
+    }
+
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .table th {
+      background-color: #f7a30a;
+      color: white;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #f7a30a;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 15px 0;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #d87f00;
+    }
+
+    footer {
+      background-color: #fff8f0;
+      text-align: center;
+      padding: 20px;
+      border-top: 4px solid #f7a30a;
+      color: #555;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #d87f00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      color: #f59e0b;
+      text-decoration: underline;
+    }
+
+    /* --- imagem responsiva e de alta qualidade --- */
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 25px 0;
+    }
+
+    .img-container img {
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 768px) {
+      .img-container img {
+        width: 95%;
+        max-width: none;
+      }
+    }
+
+    /* --- impressão --- */
+    @media print {
+      header {
+        padding: 10px;
+      }
+
+      section {
+        padding: 10px;
+      }
+
+      .img-container img {
+        width: 70%;
+        max-width: 600px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      header, .img-container {
+        page-break-inside: avoid;
+      }
+
+      .download-btn, .print-btn {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="img/logo-wjvolts.png" alt="Logo WJVolts">
+    <h1>Orçamento - Pedro; sala escritório da oficina - TPS</h1>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+
+    <button onclick="window.print()" 
+            style="background-color:#f59e0b; color:white; border:none; 
+                   padding:10px 20px; border-radius:8px; cursor:pointer; 
+                   font-size:16px; margin-top:10px;">
+      🖨️ Imprimir / Baixar PDF
+    </button>
+  </header>
+
+  <section>
+    <h3 style="text-align:center;"> (instalar Ar) escritório da oficina (Pedro) - TPS</h3>
+
+        <h2>1. Identificação do Serviço</h2>
+    <p>
+      Montagem <strong>linha de cobre para ar-condicionado</strong> da 
+      <strong>Eecritório da Oficina</strong>, com fornecimento do material 
+    </p>
+
+    <h2>2. Escopo dos Serviços</h2>
+    <ul>
+      <li>desmontagem da evaporadora e condensadora para lavagem.</li>
+      <li>Montagem da linha de cobre.</li>
+      <li>Instalar Ar-condicionado com complemento de carga de gás</li>
+     
+    </ul>
+
+    
+
+    <h2>4. Condições Comerciais</h2>
+    <ul>
+      <li>Prazo de execução: <strong>01 a 02 dias</strong> após aprovação.</li>
+      <li>Garantia: <strong>90 dias</strong> sobre a instalação.</li>
+      <li>Inclusos: deslocamento, mão de obra e materiais.</li>
+      <li>Não inclusos: fornecimento de energia provisória e adequações civis.</li>
+    </ul>
+
+    <h2>5. Valor e Forma de Pagamento</h2>
+    <p>
+      Valor total do serviço: <strong style="color:#d87f00;">R$ 1.965,03</strong><br>
+    </p>
+
+    <h2>6. Considerações Técnicas</h2>
+    <p>
+      Todo o serviço será executado conforme normas da ABNT e recomendações técnicas
+      para redes elétricas e de dados, garantindo isolamento, aterramento e organização adequados.
+    </p>
+
+    <div style="text-align:center;">
+      <a href="Orcamento_Rede_Eletrica_WJVolts.docx" class="download-btn" download>
+        📄 Baixar Orçamento Completo
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>WJVolts Ltda – CNPJ: 52.216.384/0001-88</p>
+    <p>Campo Grande, Cariacica – ES</p>
+
+    <div style="margin-top:10px;">
+      🌐 <a href="https://www.wjvolts.com.br" target="_blank">www.wjvolts.com.br</a><br>
+      📰 <a href="https://wjvolts.blogspot.com/" target="_blank">Blog WJVolts</a><br>
+      📷 <a href="https://www.instagram.com/wjvolts?igsh=aWM5aGJ2cXIxN2Qx" target="_blank">Instagram</a><br>
+      💬 <a href="https://wa.me/5527997723637?text=Olá!+Cheguei+pelo+orçamento+gerado+no+site+(orctps0987601.html)." 
+           target="_blank">WhatsApp (+55 27 99772-3637)</a>
+    </div>
+
+    <p>© 2025 WJVolts. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
